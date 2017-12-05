@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>旅游APP - 首页</title>
+    <script>
+        (function(doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function() {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if (clientWidth >= 750) {
+                        docEl.style.fontSize = '100px';
+                    } else {
+                        docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                    }
+                };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+
+    <!-- <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script> -->
+    <style type="text/css">
+        /*滚动水平导航栏 start*/
+        
+        .lr_nb {
+            width: 12rem;
+            height: 0.8rem;
+            overflow: hidden;
+            background: #fff;
+            padding: 0.2rem 0.2rem 0.2rem 0;
+            border-bottom: 10px solid #eee;
+            -webkit-transition: .3s all;
+            transition: .3s all
+        }
+        
+        .lr_nb .slider_wrap.line {
+            overflow: hidden;
+            /* overflow-x: scroll; */
+            width: 12rem;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        .lr_nb .slider_wrap.line .item_cell {
+            display: block;
+            float: left;
+            width: 1.8rem!important;
+            height: 0.8rem;
+            margin-left: 0.2rem;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .item_cell img {
+            width: 1.8rem;
+            height: 0.8rem;
+            display: block;
+            border-radius: 5px;
+        }
+        
+        .lr_nb .slider_wrap::-webkit-scrollbar {
+            display: none
+        }
+        
+        .lr_nb .wx_items {
+            white-space: nowrap
+            /* 规定段落中的文本不进行换行 */
+        }
+        /*滚动水平导航栏 end*/
+    </style>
+</head>
+
+<body>
+    <!--滚动水平导航栏 start-->
+    <div class="lr_nb">
+        <div class="slider_wrap line">
+            <div class="wx_items">
+                <a href="" class="item_cell">
+                    <img src="images/w700_h0--001.jpg" alt="">
+                </a>
+                <a href="" class="item_cell">
+                    <img src="images/w700_h0--002.jpg" alt="">
+                </a>
+                <a href="" class="item_cell">
+                    <img src="images/w700_h0--003.jpeg" alt="">
+                </a>
+                <a href="" class="item_cell">
+                    <img src="images/w700_h0--004.jpg" alt="">
+                </a>
+                <a href="" class="item_cell">
+                    <img src="images/w700_h0--005.jpg" alt="">
+                </a>
+                <a href="" class="item_cell">
+                    <img src="images/w700_h0--006.jpg" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--滚动水平导航栏 end-->
+    <!-- <script>
+        $(function() {
+            $(".wx_items .item_cell").click(function() {
+                $(this).addClass('current').siblings().removeClass('current');
+            });
+        });
+    </script> -->
+</body>
+
+</html>
